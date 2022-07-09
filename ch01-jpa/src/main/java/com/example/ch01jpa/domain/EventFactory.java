@@ -6,4 +6,10 @@ public class EventFactory {
         Receiver receiver = order.getReceiver();
         return new OrderReceived(address, receiver);
     }
+
+    public OrderReceived orderReceivedNonStatic(Order order) {
+        String address = order.getAddress();
+        Receiver receiver = order.getReceiver();
+        return new OrderReceived(address, receiver);
+    }
 }

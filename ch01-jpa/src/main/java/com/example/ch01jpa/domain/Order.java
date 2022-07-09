@@ -28,9 +28,10 @@ public class Order {
         this.receiver = receiver;
     }
 
-    public static Order of(String address, Receiver receiver) {
+    public static Order of(String address, Receiver receiver, EventFactory eventFactory) {
         Order order = new Order(address, receiver);
-        OrderReceived event = EventFactory.orderReceived(order);
+        // OrderReceived event = EventFactory.orderReceived(order);
+        eventFactory.orderReceivedNonStatic(order);
         return order;
     }
 
