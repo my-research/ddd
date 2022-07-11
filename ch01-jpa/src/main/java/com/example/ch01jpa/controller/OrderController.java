@@ -1,6 +1,9 @@
 package com.example.ch01jpa.controller;
 
-import com.example.ch01jpa.domain.Order;
+import com.example.ch01jpa.domain.core.order.Order;
+import com.example.ch01jpa.domain.core.order.Receiver;
+import com.example.ch01jpa.domain.value.Address;
+import com.example.ch01jpa.domain.value.PhoneNumber;
 import com.example.ch01jpa.persistence.repository.OrderRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +21,10 @@ public class OrderController {
 
     @GetMapping("/orders")
     public ResponseEntity<List<Order>> getOrders() {
-        repository.save(Order.builder().address("seoul").build());
+        Receiver receiver = Receiver.of("jang", Address.from("seoul"), PhoneNumber.from("01012341234"));
+        Order order = Order.builder()
+                .build();
+        repository.save(order);
         return ResponseEntity.ok(repository.findAll());
     }
 }
