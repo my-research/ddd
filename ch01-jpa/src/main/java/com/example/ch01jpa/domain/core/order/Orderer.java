@@ -1,4 +1,4 @@
 package com.example.ch01jpa.domain.core.order;
 
-public class Receiver {
+public class Orderer {
 }

@@ -1,7 +1,5 @@
 package com.example.ch01jpa.domain.core.order;
 
-import com.example.ch01jpa.domain.converter.AddressConverter;
-import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,6 +20,4 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Convert(converter = AddressConverter.class)
-    private Receiver receiver;
 }

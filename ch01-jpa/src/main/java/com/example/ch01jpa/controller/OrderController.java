@@ -1,7 +1,6 @@
 package com.example.ch01jpa.controller;
 
 import com.example.ch01jpa.domain.core.order.Order;
-import com.example.ch01jpa.domain.core.order.Receiver;
 import com.example.ch01jpa.domain.value.Address;
 import com.example.ch01jpa.domain.value.PhoneNumber;
 import com.example.ch01jpa.persistence.repository.OrderRepository;
