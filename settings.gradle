@@ -3,4 +3,5 @@ include 'ch02-infra'
 include 'domain'
 include 'domain'
 include 'ch02-domain'
+include 'ch02-web'
 
