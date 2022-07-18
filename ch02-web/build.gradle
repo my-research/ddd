@@ -12,6 +12,7 @@ repositories {
 }
 
 dependencies {
+    implementation project(':ch02-domain')
     implementation project(':ch02-infra')
 
     // spring

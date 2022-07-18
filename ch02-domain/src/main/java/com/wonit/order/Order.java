@@ -13,9 +13,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class Order {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EmbeddedId
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private OrderId id;
     private String address;
+
+    public Order(Long id, String address) {
+        this.id = OrderId.of(id);
+        this.address = address;
+    }
 }

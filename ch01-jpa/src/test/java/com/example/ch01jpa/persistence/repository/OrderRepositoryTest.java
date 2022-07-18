@@ -3,6 +3,7 @@ package com.example.ch01jpa.persistence.repository;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.example.ch01jpa.domain.core.order.Order;
+import com.example.ch01jpa.domain.core.order.Receiver;
 import com.example.ch01jpa.domain.value.Address;
 import com.example.ch01jpa.domain.value.PhoneNumber;
 import org.junit.jupiter.api.Test;
@@ -22,7 +23,6 @@ class OrderRepositoryTest {
     @Test
     void saveAndQuery() {
         Order order = Order.builder()
-                .receiver(RECEIVER)
                 .build();
 
         Order saved = sut.save(order);
