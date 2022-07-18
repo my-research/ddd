@@ -1,25 +1,23 @@
-package com.wonit.order;
+package com.wonit.order.core;
 
+import com.wonit.order.value.OrderId;
+import com.wonit.order.value.Orderer;
+import com.wonit.order.value.ShippingInfo;
 import javax.persistence.Embedded;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
-@Entity(name = "orders")
-@NoArgsConstructor
+@Entity(name = "purchase_order")
 @Getter
 public class Order {
     @EmbeddedId
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private OrderId id;
-    private String address;
-
-    public Order(Long id, String address) {
-        this.id = OrderId.of(id);
-        this.address = address;
-    }
+    OrderId id;
+    @Embedded
+    Orderer orderer;
+    @Embedded
+    ShippingInfo shippingInfo;
 }

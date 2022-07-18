@@ -1,7 +1,7 @@
 package com.wonit;
 
-import com.wonit.order.Order;
-import com.wonit.order.OrderId;
+import com.wonit.order.core.Order;
+import com.wonit.order.value.OrderId;
 import com.wonit.order.OrderRepository;
 import org.springframework.data.repository.Repository;
 

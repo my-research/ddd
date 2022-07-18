@@ -1,10 +1,8 @@
-package com.wonit.order;
+package com.wonit.order.value;
 
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import lombok.NoArgsConstructor;
-import lombok.Value;
 
 // @Value(staticConstructor = "of")
 @Embeddable
