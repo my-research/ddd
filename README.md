@@ -6,22 +6,23 @@
 
 ## index
 
-- ch01
-  - jpa overview
-- ch02
-  - domain
-  - infra
-  - web
+- jpa-jdbc
+- layer
+- domain-event
 
-# ch01
+# jpa-jdbc
 
-- jpa 를 이용해서 간단하게 이것 저것 시도해봅니다.
+- jpa 와 jdbc 를 이용해서 간단하게 이것 저것 시도해봅니다.
 - DDD 와 크게 관련이 없습니다
 
-# ch02
+# layer
 
-- DDD 를 이용해서 Domain 의 mapping 을 구현합니다
-- 핵심 키워드
-  - Embeddable
-  - EmbeddedId
-  - Embedded
+- DDD 에서 중요하게 생각하는 domain 을 보호하는 layered architecture 에 대해서 연구합니다
+- layer (top down)
+  - web
+  - infrastructure
+  - domain
+
+# domain-event
+
+- 도메인 이벤트에 대해서 연구합니다

@@ -1,6 +1,7 @@
-package com.example.layer;
+package com.example.layer.application;
 
 import com.example.layer.entity.JpaOrderEntity;
+import com.example.layer.model.SavedUser;
 import com.example.layer.repository.JpaOrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -14,10 +15,11 @@ public class OrderSaver {
     private int count = 0;
     private final JpaOrderRepository repository;
 
-    public JpaOrderEntity save() {
+    public SavedUser save() {
         JpaOrderEntity entity = JpaOrderEntity.builder()
                 .address(addressCandidates[count++])
                 .build();
-        return repository.save(entity);
+        JpaOrderEntity saved = repository.save(entity);
+        return SavedUser.of(saved.getId(), saved.getAddress());
     }
 }

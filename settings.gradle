@@ -1,11 +1,15 @@
 rootProject.name = 'ddd'
 
-include 'ch02-web'
-include 'ch02-infra'
-include 'ch02-domain'
 include 'jpa-jdbc'
 include 'jpa-jdbc:jpa'
 include 'jpa-jdbc:jdbc'
+
 include 'layer'
+include 'layer:domain'
+include 'layer:infrastructure'
+include 'layer:web'
+
 include 'domain-event'
+include 'layer:application'
+findProject(':layer:application')?.name = 'application'
 
