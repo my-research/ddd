@@ -10,19 +10,20 @@
 - layer
 - domain-event
 
-# jpa-jdbc
+# **research 1.** jpa-jdbc
 
 - jpa 와 jdbc 를 이용해서 간단하게 이것 저것 시도해봅니다.
 - DDD 와 크게 관련이 없습니다
 
-# layer
+# **research 2.** [layer](https://github.com/my-research/ddd/tree/master/layer)
 
 - DDD 에서 중요하게 생각하는 domain 을 보호하는 layered architecture 에 대해서 연구합니다
 - layer (top down)
   - web
   - infrastructure
   - domain
+  - application
 
-# domain-event
+# **research 3.** domain-event
 
 - 도메인 이벤트에 대해서 연구합니다
