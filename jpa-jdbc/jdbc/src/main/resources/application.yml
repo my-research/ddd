@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:6543/events-relay
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  h2:
+    console:
+      enabled: true
