@@ -14,7 +14,6 @@ repositories {
 }
 
 dependencies {
-    implementation project(':layer:infrastructure')
     implementation project(':layer:domain')
 
     implementation 'org.springframework.boot:spring-boot-starter-web'

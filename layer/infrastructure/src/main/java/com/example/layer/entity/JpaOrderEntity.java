@@ -5,35 +5,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 @Entity(name = "orders")
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@Getter
-@ToString
-public class JpaOrderEntity {
+public class JpaOrderEntity extends Order {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String address;
+    private final Long orderId;
+    private final String type;
 
-    public Order toOrder() {
-        return Order.builder()
-                .id(this.id)
-                .address(this.address)
-                .build();
-    }
-
-    public static JpaOrderEntity from(Order order) {
-        return JpaOrderEntity.builder()
-                .id(order.getId())
-                .address(order.getAddress())
-                .build();
+    public JpaOrderEntity(Long id, String address, Long orderId, String type) {
+        super(id, address);
+        this.orderId = orderId;
+        this.type = type;
     }
 }

@@ -1,7 +1,9 @@
 package com.example.layer.repository;
 
 import com.example.layer.core.Order;
+import java.util.Optional;
 
 public interface OrderRepository {
-    Order findByAddress(String address);
+    Optional<Order> findById(Long id);
+    Order save(Order order);
 }
