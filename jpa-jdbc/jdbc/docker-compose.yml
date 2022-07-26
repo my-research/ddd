@@ -5,10 +5,10 @@ services:
     container_name: pg-ddd-jdbc-datasource
     restart: always
     ports:
-      - "5432:5432"
+      - "6923:5432"
     environment:
-      POSTGRES_DB: "ddd-jdbc-database-db"
+      POSTGRES_DB: "ddd-jdbc-test-db"
       POSTGRES_USER: "user"
       POSTGRES_PASSWORD: "password"
     volumes:
-      - ./schema:/docker-entrypoint-initdb.d
+      - ${PWD}/schema:/docker-entrypoint-initdb.d

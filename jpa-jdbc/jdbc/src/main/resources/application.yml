@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:6543/events-relay
+    url: jdbc:postgresql://localhost:6923/ddd-jdbc-test-db
     username: user
     password: password
     driver-class-name: org.postgresql.Driver

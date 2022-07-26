@@ -15,8 +15,9 @@ public class UserJoinController {
     @GetMapping("/join")
     public String join() {
         User user = repository.save(User.builder()
-                .name("jangwonik")
-                .build());
+                        .id(1L)
+                        .name("jangwonik")
+                        .build());
 
         return repository.save(user).toString();
     }
