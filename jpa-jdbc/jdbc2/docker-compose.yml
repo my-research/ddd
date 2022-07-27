@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:latest
+    container_name: pg-ddd-jdbc-datasource
+    restart: always
+    ports:
+      - "6923:5432"
+    environment:
+      POSTGRES_DB: "ddd-jdbc-test-db"
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "password"
+    volumes:
+      - ${PWD}/schema:/docker-entrypoint-initdb.d

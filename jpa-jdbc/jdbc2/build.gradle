@@ -21,8 +21,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.postgresql:postgresql:42.2.24.jre7'
-    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'org.postgresql:postgresql:42.3.6'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'

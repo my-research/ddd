@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:6923/ddd-jdbc-test-db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  h2:
+    console:
+      enabled: true
