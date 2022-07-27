@@ -8,7 +8,7 @@ import lombok.Value;
 public class Infos {
     List<Info> infos;
 
-    public void add(long id) {
+    public void add(int id) {
         infos.add(Info.of(id, UUID.randomUUID().toString()));
     }
 }

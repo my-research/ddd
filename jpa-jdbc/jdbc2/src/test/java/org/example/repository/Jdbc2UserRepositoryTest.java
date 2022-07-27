@@ -1,5 +1,6 @@
 package org.example.repository;
 
+import java.time.LocalDateTime;
 import org.example.entity.Infos;
 import org.example.entity.User;
 import org.example.persistence.repository.UserRepository;
@@ -23,17 +24,33 @@ class Jdbc2UserRepositoryTest {
                 .addOffset(0)
                 .publishOffset(0)
                 .build();
-        repository.save(jangwonik);
+
+        User user = new User(10L, "", Infos.of(new LinkedList<>()), 0, 0);
+        repository.save(user);
     }
 
     @Test
-    void name() throws InterruptedException {
+    void pop() throws InterruptedException {
         while (true) {
             Thread.sleep(100);
             User user = repository.findById(10L).get();
             user.pop();
             User save = repository.save(user);
             System.out.println(save);
+        }
+    }
+
+    @Test
+    void pop_by_second() throws InterruptedException {
+        while (true) {
+            int second = LocalDateTime.now().getSecond();
+            if ((second / 10) % 2 != 0) {
+                Thread.sleep(100);
+                User user = repository.findById(10L).get();
+                user.pop();
+                User save = repository.save(user);
+                System.out.println(save);
+            }
         }
     }
 }

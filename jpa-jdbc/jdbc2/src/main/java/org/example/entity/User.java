@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.With;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.annotation.Version;
 import org.springframework.data.relational.core.mapping.Table;
 
@@ -18,7 +19,7 @@ import java.util.List;
 @Builder
 @ToString
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor(onConstructor_ = @PersistenceConstructor)
 @EqualsAndHashCode
 public class User {
     @Id
@@ -30,12 +31,11 @@ public class User {
     private int addOffset;
     private int publishOffset;
 
-    @Version
-    private Integer version;
+    /*@Version
+    private Integer version;*/
 
-    public List<String> pop() {
-        List<String> pop = infos.pop(addOffset, publishOffset);
+    public void pop() {
+        infos.pop(addOffset, publishOffset);
         publishOffset = addOffset;
-        return pop;
     }
 }
