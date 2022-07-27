@@ -11,8 +11,6 @@ public class InfoSerializer implements JsonSerializer<Info> {
     @Override
     public JsonElement serialize(Info src, Type typeOfSrc, JsonSerializationContext context) {
         JsonObject jsonObject = new JsonObject();
-
-        jsonObject.addProperty("seq", src.getSeq());
         jsonObject.addProperty("name", src.getName());
         return jsonObject;
     }

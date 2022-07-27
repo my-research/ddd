@@ -10,16 +10,10 @@ import java.util.stream.Collectors;
 public class Infos {
     List<Info> infos;
 
-    public void pop(int startOffset, int publishOffset) {
+    public void pop() {
         if (infos.isEmpty()) {
             return;
         }
         infos.remove(0);
-
-        /*return infos.stream().filter(
-                        i -> i.getSeq() > startOffset
-                                && info.getSeq() <= publishOffset
-                ).map(Info::toString)
-                .collect(Collectors.toUnmodifiableList());*/
     }
 }

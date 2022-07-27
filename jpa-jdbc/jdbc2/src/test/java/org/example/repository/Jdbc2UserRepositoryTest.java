@@ -21,12 +21,9 @@ class Jdbc2UserRepositoryTest {
                 .id(10L)
                 .name("jangwonik")
                 .infos(Infos.of(new LinkedList<>()))
-                .addOffset(0)
-                .publishOffset(0)
                 .build();
 
-        User user = new User(10L, "", Infos.of(new LinkedList<>()), 0, 0);
-        repository.save(user);
+        repository.save(jangwonik);
     }
 
     @Test

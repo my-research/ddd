@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class SerializerTest {
     @Test
     void test() {
-        Info base = Info.of(1, "hello");
+        Info base = Info.of("hello");
         String serialized = Serializer.getInstance().serialize(base);
         System.out.println("hello = " + serialized);
 

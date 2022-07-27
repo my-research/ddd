@@ -9,6 +9,7 @@ import lombok.ToString;
 import lombok.With;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;
+import org.springframework.data.annotation.PersistenceCreator;
 import org.springframework.data.annotation.Version;
 import org.springframework.data.relational.core.mapping.Table;
 
@@ -19,7 +20,7 @@ import java.util.List;
 @Builder
 @ToString
 @NoArgsConstructor
-@AllArgsConstructor(onConstructor_ = @PersistenceConstructor)
+@AllArgsConstructor(onConstructor_ = @PersistenceCreator)
 @EqualsAndHashCode
 public class User {
     @Id
@@ -28,14 +29,10 @@ public class User {
     private String name;
     private Infos infos;
 
-    private int addOffset;
-    private int publishOffset;
-
-    /*@Version
-    private Integer version;*/
+    @Version
+    private Integer version;
 
     public void pop() {
-        infos.pop(addOffset, publishOffset);
-        publishOffset = addOffset;
+        infos.pop();
     }
 }
