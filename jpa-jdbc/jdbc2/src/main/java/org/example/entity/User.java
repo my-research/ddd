@@ -1,7 +1,5 @@
 package org.example.entity;
 
-import java.util.List;
-import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -12,6 +10,8 @@ import lombok.With;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Version;
 import org.springframework.data.relational.core.mapping.Table;
+
+import java.util.List;
 
 @Table(name = "users")
 @Getter
@@ -25,12 +25,17 @@ public class User {
     private Long id;
     @With
     private String name;
-    private Infos info;
+    private Infos infos;
+
+    private int addOffset;
+    private int publishOffset;
 
     @Version
     private Integer version;
 
-    public String pop() {
-        return info.pop();
+    public List<String> pop() {
+        List<String> pop = infos.pop(addOffset, publishOffset);
+        publishOffset = addOffset;
+        return pop;
     }
 }

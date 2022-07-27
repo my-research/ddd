@@ -17,7 +17,10 @@ public class UserJoinController {
         User user = repository.save(User.builder()
                         .id(1L)
                         .name("jangwonik")
-                        .build());
+                        .addOffset(0)
+                        .publishOffset(0)
+                        .build()
+        );
 
         return repository.save(user).toString();
     }

@@ -1,15 +1,14 @@
 package org.example.persistence.util.serializer;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.example.entity.Info;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class SerializerTest {
     @Test
     void test() {
-        Info base = Info.of("hello");
+        Info base = Info.of(1, "hello");
         String serialized = Serializer.getInstance().serialize(base);
         System.out.println("hello = " + serialized);
 

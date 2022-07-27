@@ -14,6 +14,9 @@ public class InfoDeserializer  implements JsonDeserializer<Info> {
         String name = Serializer.getInstance()
                 .deserialize(json.getAsJsonObject().get("name").getAsString(), String.class);
 
-        return Info.of(name);
+        Integer seq = Serializer.getInstance()
+                .deserialize(json.getAsJsonObject().get("seq").getAsString(), Integer.class);
+
+        return Info.of(seq, name);
     }
 }

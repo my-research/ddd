@@ -17,7 +17,7 @@ class JdbcUserRepositoryTest {
     @Test
     void name() throws InterruptedException {
         while(true) {
-            Thread.sleep(1000);
+            Thread.sleep(100);
             User user = repository.findById(10L).get();
             user.add();
             User save = repository.save(user);
