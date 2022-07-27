@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 class SerializerTest {
     @Test
     void test() {
-        Info base = Info.of("hello");
+        Info base = Info.of(1,"hello");
         String serialized = Serializer.getInstance().serialize(base);
         System.out.println("hello = " + serialized);
 

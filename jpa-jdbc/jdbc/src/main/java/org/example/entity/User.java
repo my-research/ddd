@@ -2,6 +2,9 @@ package org.example.entity;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -27,10 +30,16 @@ public class User {
     private String name;
     private Infos info;
 
+    private int addOffset;
+    private int publishOffset;
+
     @Version
     private Integer version;
 
     public void add() {
-        info.add();
+        AtomicInteger atomicInteger = new AtomicInteger();
+        int i = atomicInteger.decrementAndGet();
+        addOffset = i;
+        info.add(i);
     }
 }
