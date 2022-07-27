@@ -1,7 +1,5 @@
 package org.example.repository;
 
-import static org.assertj.core.api.Assertions.*;
-
 import java.util.ArrayList;
 import org.example.entity.Info;
 import org.example.entity.Infos;
@@ -12,23 +10,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UserRepositoryTest {
+class JdbcUserRepositoryTest {
     @Autowired
     UserRepository repository;
 
     @Test
-    void name() {
-        ArrayList<Info> infos = new ArrayList<>();
-        infos.add(Info.of("this"));
-        infos.add(Info.of("is"));
-        infos.add(Info.of("test"));
-
-        User user = User.builder()
-                .id(10L)
-                .name("jang")
-                .info(Infos.of(infos))
-                .build();
-
-        repository.save(user);
+    void name() throws InterruptedException {
+        while(true) {
+            Thread.sleep(1000);
+            User user = repository.findById(10L).get();
+            user.add();
+            User save = repository.save(user);
+            System.out.println("save = " + save);
+        }
     }
 }

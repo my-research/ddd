@@ -1,5 +1,7 @@
 package org.example.entity;
 
+import java.util.List;
+import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -28,4 +30,7 @@ public class User {
     @Version
     private Integer version;
 
+    public String pop() {
+        return info.pop();
+    }
 }
