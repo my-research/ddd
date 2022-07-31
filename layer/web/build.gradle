@@ -21,7 +21,7 @@ repositories {
 dependencies {
 
     implementation project(':layer:application')
-    implementation project(':layer:infrastructure')
+    // implementation project(':layer:infrastructure')
 
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
