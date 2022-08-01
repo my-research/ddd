@@ -2,7 +2,7 @@ package com.example.layer.application;
 
 import com.example.layer.core.Order;
 import com.example.layer.model.UpdatedUser;
-import com.example.layer.repository.OrderRepository;
+import com.example.layer.core.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

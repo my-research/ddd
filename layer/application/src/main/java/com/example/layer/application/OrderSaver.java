@@ -1,8 +1,8 @@
 package com.example.layer.application;
 
 import com.example.layer.core.Order;
-import com.example.layer.model.SavedUser;
-import com.example.layer.repository.OrderRepository;
+import com.example.layer.model.SavedOrder;
+import com.example.layer.core.OrderRepository;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,9 +13,9 @@ public class OrderSaver {
 
     private final OrderRepository repository;
 
-    public SavedUser save() {
+    public SavedOrder save() {
         Order order = Order.builder().address(UUID.randomUUID().toString()).build();
         Order saved = repository.save(order);
-        return SavedUser.of(saved.getId(), saved.getAddress());
+        return SavedOrder.of(saved.getId(), saved.getAddress());
     }
 }

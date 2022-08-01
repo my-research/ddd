@@ -5,7 +5,7 @@ import lombok.Value;
 
 @Value(staticConstructor = "of")
 @ToString
-public class SavedUser {
+public class SavedOrder {
     Long userId;
     String address;
 }

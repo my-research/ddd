@@ -2,7 +2,7 @@ package com.example.layer;
 
 import com.example.layer.application.OrderSaver;
 import com.example.layer.application.OrderUpdater;
-import com.example.layer.model.SavedUser;
+import com.example.layer.model.SavedOrder;
 import com.example.layer.model.UpdatedUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +20,7 @@ public class OrderController {
 
     @GetMapping("/")
     public String create() {
-        SavedUser result = saver.save();
+        SavedOrder result = saver.save();
 
         return result.toString();
     }
