@@ -19,11 +19,11 @@
 
 - DDD 에서 중요하게 생각하는 domain 을 보호하는 layered architecture 에 대해서 연구합니다
 - layer (top down)
-  - web
-  - infrastructure
-  - domain
+  - web (presentation)
   - application
+  - domain
+  - infrastructure
 
-# **research 3.** domain-event
+# **research 3.** [domain-event](https://github.com/my-research/ddd/tree/master/domain-event)
 
 - 도메인 이벤트에 대해서 연구합니다
