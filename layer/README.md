@@ -1,5 +1,8 @@
 # layer 분리하기
 
+<img width="843" alt="image" src="https://user-images.githubusercontent.com/48385288/184578296-6b22cfe3-19b3-47ee-8c8e-56d8622f9bfe.png">
+
+
 ### 목차
 
 - 연구 주제

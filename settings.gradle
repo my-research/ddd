@@ -6,11 +6,9 @@ include 'jpa-jdbc:jdbc'
 include 'jpa-jdbc:jdbc2'
 
 include 'layer'
+include 'layer:web'
+include 'layer:application'
 include 'layer:domain'
 include 'layer:infrastructure'
-include 'layer:web'
-
 include 'domain-event'
-include 'layer:application'
-findProject(':layer:application')?.name = 'application'
 
