@@ -1,3 +1,5 @@
+### 해당 repository 에서 등장하는 코드는 [https://wonit.tistory.com 의 domain-driven-design 카테고리](https://wonit.tistory.com/category/🔬아키텍처/-%20Domain-Driven-Design) 에서 다듬어진 글로 확인할 수 있습니다.
+
 # DDD
 
 이 Repository 는 DDD 관련된 것들을 연구하는 레포지토리 입니다

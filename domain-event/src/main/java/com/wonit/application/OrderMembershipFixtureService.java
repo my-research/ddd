@@ -22,7 +22,7 @@ public class OrderMembershipFixtureService {
             Order order = Order.create();
             Order saved = orderRepository.save(order);
 
-            Membership membership = Membership.by(saved.getId());
+            Membership membership = Membership.by(saved.getId(), "010-1234-123" + i);
             membershipRepository.save(membership);
         });
     }

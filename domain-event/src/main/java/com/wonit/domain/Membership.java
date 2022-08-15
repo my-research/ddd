@@ -13,18 +13,20 @@ import lombok.NoArgsConstructor;
 @Getter
 public class Membership {
 
-    public static Membership by(Long orderId) {
-        return new Membership(orderId);
+    public static Membership by(Long orderId, String userPhoneNumber) {
+        return new Membership(orderId, userPhoneNumber);
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long orderId;
+    private String userPhoneNumber;
     private Boolean available = true;
 
-    private Membership(Long orderId) {
+    private Membership(Long orderId, String userPhoneNumber) {
         this.orderId = orderId;
+        this.userPhoneNumber = userPhoneNumber;
     }
 
     public void terminate() {
