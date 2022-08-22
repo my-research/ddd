@@ -29,3 +29,7 @@
 # **research 3.** [domain-event](https://github.com/my-research/ddd/tree/master/domain-event)
 
 - 도메인 이벤트에 대해서 연구합니다
+
+### References
+
+- [https://deviq.com/design-patterns/](https://deviq.com/design-patterns/repository-pattern)

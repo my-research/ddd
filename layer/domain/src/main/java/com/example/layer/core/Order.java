@@ -7,10 +7,12 @@ import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity(name = "orders")
 @Getter
 @Builder
+@NoArgsConstructor
 @AllArgsConstructor
 public class Order {
 
@@ -19,7 +21,7 @@ public class Order {
     private Long id;
     private String address;
 
-    public void decorateAddress() {
+    public void printAddress() {
         address = "주소는 [" + address + "] 입니다.";
     }
 }

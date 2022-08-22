@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/orders")
 @RequiredArgsConstructor
-public class OrderController {
+public final class OrderController {
 
     private final OrderSaver saver;
     private final OrderUpdater updater;
 
-    @GetMapping("/")
+    @GetMapping
     public String create() {
         SavedOrder result = saver.save();
 

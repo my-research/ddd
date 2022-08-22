@@ -15,7 +15,7 @@ public class OrderUpdater {
     @Transactional
     public UpdatedUser update(Long userId) {
         Order order = repository.findById(userId).orElseThrow();
-        order.decorateAddress();
+        order.printAddress();
         Order saved = repository.save(order);
         return UpdatedUser.of(saved.getId(), saved.getAddress());
     }
