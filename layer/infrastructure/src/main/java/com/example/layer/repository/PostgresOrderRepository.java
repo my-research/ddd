@@ -14,7 +14,8 @@ public class PostgresOrderRepository implements OrderRepository {
 
     @Override
     public Order save(Order order) {
-        return null;
+        SpringDataJpaOrderEntity entity = repository.save(SpringDataJpaOrderEntity.convert(order));
+        return SpringDataJpaOrderEntity.convert(entity);
     }
 
     @Override

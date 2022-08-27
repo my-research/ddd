@@ -12,11 +12,15 @@ import lombok.ToString;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @ToString
-public class Order {
+public class Order  {
 
     public static Order newInstance(String address, OrderItems orderItems) {
         Long id = TimeBasedIdGenerator.gen();
         return new Order(id, address, orderItems, OrderStatus.WAITING, LocalDateTime.now());
+    }
+
+    public static Order of(Long id, String address, OrderItems orderItems, OrderStatus status, LocalDateTime createdAt) {
+        return new Order(id, address, orderItems, status, createdAt);
     }
 
     private Long id;
