@@ -9,6 +9,7 @@ include 'layer'
 include 'layer:web'
 include 'layer:application'
 include 'layer:domain'
+include 'layer:commons'
 include 'layer:infrastructure'
-include 'domain-event'
 
+include 'domain-event'

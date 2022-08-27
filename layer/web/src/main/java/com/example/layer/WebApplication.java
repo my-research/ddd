@@ -11,7 +11,7 @@ public class WebApplication {
 
         ConfigurableApplicationContext context = SpringApplication.run(WebApplication.class, args);
 
-        Object orderController = context.getBean("orderController");
+        Object orderController = context.getBean("createOrderController");
     }
 
 }

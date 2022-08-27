@@ -1,8 +1,6 @@
 package com.example.layer.repository;
 
-import com.example.layer.core.Order;
-import com.example.layer.core.OrderRepository;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SpringDataJpaOrderRepository extends Repository<Order, Long>, OrderRepository {
+public interface SpringDataJpaOrderRepository extends JpaRepository<SpringDataJpaOrderEntity, Long> {
 }
