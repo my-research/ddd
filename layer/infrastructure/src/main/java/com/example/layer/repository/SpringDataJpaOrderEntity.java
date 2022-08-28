@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class SpringDataJpaOrderEntity {
+public class SpringDataJpaOrderEntity  {
 
     public static SpringDataJpaOrderEntity convert(Order order) {
         List<SpringDataJpaOrderItem> items = order.getOrderItems().stream()
