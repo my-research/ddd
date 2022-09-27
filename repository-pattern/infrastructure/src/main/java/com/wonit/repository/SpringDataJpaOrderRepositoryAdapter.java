@@ -20,8 +20,8 @@ public class SpringDataJpaOrderRepositoryAdapter implements OrderRepository {
     }
 
     @Override
-    public Optional<Order> findById(Long id) {
-        Optional<SpringDataJpaOrderEntity> optional = repository.findById(id);
+    public Optional<Order> findByUserId(long userId) {
+        Optional<SpringDataJpaOrderEntity> optional = repository.findByUserId(userId);
         if (optional.isEmpty()) {
             return Optional.empty();
         }
@@ -31,6 +31,7 @@ public class SpringDataJpaOrderRepositoryAdapter implements OrderRepository {
     private SpringDataJpaOrderEntity convert(Order domain) {
         return SpringDataJpaOrderEntity.builder()
                 .id(domain.getId())
+                .userId(domain.getUserId())
                 .orderItems(domain.getOrderItems())
                 .totalPrice(domain.getTotalPrice())
                 .build();

@@ -11,14 +11,13 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Entity
+@Entity(name = "orders")
 @Getter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class SpringDataJpaOrderEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private Long userId;
     @ElementCollection

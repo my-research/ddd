@@ -18,6 +18,4 @@ include 'repository-pattern'
 include 'repository-pattern:web'
 include 'repository-pattern:domain'
 include 'repository-pattern:infrastructure'
-include 'repository-pattern:infrastructure:spring-data-jdbc'
-include 'repository-pattern:infrastructure:spring-data-jpa'
 
