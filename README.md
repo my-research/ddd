@@ -33,3 +33,4 @@
 ### References
 
 - [https://deviq.com/design-patterns/](https://deviq.com/design-patterns/repository-pattern)
+- [spring-data-jdbc implement-caching, spring.io](https://spring.io/blog/2021/10/18/spring-data-jdbc-how-do-i-implement-caching)
