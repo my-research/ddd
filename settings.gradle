@@ -18,4 +18,5 @@ include 'repository-pattern'
 include 'repository-pattern:web'
 include 'repository-pattern:domain'
 include 'repository-pattern:infrastructure'
+include 'mixin'
 
