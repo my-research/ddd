@@ -7,7 +7,7 @@
 ## keywords
 
 ubiquitous language, ([유비쿼터스 랭귀지](#)),
-layered architecture, ([계층형 아키텍처](#)),
+layered architecture, ([레이어드 아키텍처](#)),
 entity, ([엔티티](#)),
 value object, ([값 객체](#)),
 domain service, application service, infrastructure service, ([도메인 서비스, 애플리케이션 서비스, 인프라 서비스](#)),
