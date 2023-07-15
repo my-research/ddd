@@ -6,7 +6,6 @@
 
 ## keywords
 
-ubiquitous language, ([유비쿼터스 랭귀지](#)),
 layered architecture, ([레이어드 아키텍처](#)),
 entity, ([엔티티](#)),
 value object, ([값 객체](#)),
@@ -14,14 +13,8 @@ domain service, application service, infrastructure service, ([도메인 서비�
 
 ## index
 
-- jpa-jdbc
 - layer
 - domain-event
-
-# **research 1.** jpa-jdbc
-
-- jpa 와 jdbc 를 이용해서 간단하게 이것 저것 시도해봅니다.
-- `./jpa-jdbc/jdbc/docker-compose.yml` 로 쉽게 database 를 구동할 수 있습니다 
 
 # **research 2.** [layer](https://github.com/my-research/ddd/tree/master/layer)
 
