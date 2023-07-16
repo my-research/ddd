@@ -13,6 +13,9 @@ include 'layer:commons'
 include 'layer:infrastructure'
 
 include 'domain-event'
+include 'domain-event:custom-domain-event'
+include 'domain-event:jpa-domain-event'
+include 'entity'
 
 include 'repository-pattern'
 include 'repository-pattern:web'
