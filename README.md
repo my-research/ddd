@@ -6,30 +6,17 @@
 
 ## keywords
 
-layered architecture, ([레이어드 아키텍처](#)),
-entity, ([엔티티](#)),
-value object, ([값 객체](#)),
-domain service, application service, infrastructure service, ([도메인 서비스, 애플리케이션 서비스, 인프라 서비스](#)),
+layered-architecture: ([레이어드 아키텍처](#)),
+entity: ([엔티티](#)),
+value-object, ([값 객체](#)),
+domain-service, application-service, infrastructure-service: ([도메인 서비스, 애플리케이션 서비스, 인프라 서비스](#)),
+domain-event, ([도메인 이벤트](#)),
+domain-event-by-spring-event([spring event 로 구현한 domain event](#)), 
+domain-event-by-jpa([jpa 로 구현한 domain event](#)), 
 
-## index
-
-- layer
-- domain-event
-
-# **research 2.** [layer](https://github.com/my-research/ddd/tree/master/layer)
-
-- DDD 에서 중요하게 생각하는 domain 을 보호하는 layered architecture 에 대해서 연구합니다
-- layer (top down)
-  - web (presentation)
-  - application
-  - domain
-  - infrastructure
-
-# **research 3.** [domain-event](https://github.com/my-research/ddd/tree/master/domain-event)
-
-- 도메인 이벤트에 대해서 연구합니다
 
 ### References
-
+- [domain driven design, eric evans](https://www.yes24.com/Product/Goods/5312881)
+- [implementing domain driven design, vaughn vernon](https://www.yes24.com/Product/Goods/25100510)
 - [https://deviq.com/design-patterns/](https://deviq.com/design-patterns/repository-pattern)
 - [spring-data-jdbc implement-caching, spring.io](https://spring.io/blog/2021/10/18/spring-data-jdbc-how-do-i-implement-caching)
