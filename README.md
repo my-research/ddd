@@ -6,10 +6,12 @@
 
 ## 블로그 posting
 
-- [entity 에 대한 여러 이야기](https://wonit.tistory.com/652)
-- [entity 와 식별자에 대한 이야기](https://wonit.tistory.com/653)
+- [entity 에 대한 여러 여러 이야기](https://wonit.tistory.com/652)
+- [entity 와 식별자에 대한 여러 이야기](https://wonit.tistory.com/653)
 - entity 와 생성에 대한 이야기
 - entity 와 violation 에 대한 이야기
+- [value 에 대한 여러 이야기](https://wonit.tistory.com/654)
+- value 와 ORM 에 대한 여러 이야기
 
 ## keywords
 
