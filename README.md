@@ -4,6 +4,13 @@
 
 이 Repository 는 DDD 관련된 것들을 연구하는 레포지토리 입니다
 
+## 블로그 posting
+
+- [entity 에 대한 여러 이야기](https://wonit.tistory.com/652)
+- [entity 와 식별자에 대한 이야기](https://wonit.tistory.com/653)
+- entity 와 생성에 대한 이야기
+- entity 와 violation 에 대한 이야기
+
 ## keywords
 
 layered-architecture: ([레이어드 아키텍처](#)),

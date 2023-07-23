@@ -1,5 +1,8 @@
 rootProject.name = 'ddd'
 
+include 'entity'
+include 'value'
+
 include 'jpa-jdbc'
 include 'jpa-jdbc:jpa'
 include 'jpa-jdbc:jdbc'
@@ -15,11 +18,8 @@ include 'layer:infrastructure'
 include 'domain-event'
 include 'domain-event:custom-domain-event'
 include 'domain-event:jpa-domain-event'
-include 'entity'
 
 include 'repository-pattern'
 include 'repository-pattern:web'
 include 'repository-pattern:domain'
 include 'repository-pattern:infrastructure'
-include 'mixin'
-
