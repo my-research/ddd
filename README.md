@@ -1,4 +1,4 @@
-### 해당 repository 에서 등장하는 코드는 [https://wonit.tistory.com 의 domain-driven-design 카테고리](https://wonit.tistory.com/category/🔬아키텍처/-%20Domain-Driven-Design) 에서 다듬어진 글로 확인할 수 있습니다.
+> 해당 repository 에서 등장하는 코드는 [https://wonit.tistory.com 의 domain-driven-design 카테고리](https://wonit.tistory.com/category/🔬아키텍처/-%20Domain-Driven-Design) 에서 다듬어진 글로 확인할 수 있습니다.
 
 # DDD
 
