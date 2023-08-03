@@ -12,6 +12,7 @@
 - entity 와 violation 에 대한 이야기
 - [value 에 대한 여러 이야기](https://wonit.tistory.com/654)
 - value 와 ORM 에 대한 여러 이야기
+- aggregate 에 대한 여러 이야기
 
 ## keywords
 
